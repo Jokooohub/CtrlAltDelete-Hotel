@@ -30,24 +30,19 @@
     <div class="container-fluid px-lg-4 mt-4">
         <div class="swiper swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="images/carousel/carousel1.png" class="w-100 d-block"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/carousel2.png" class="w-100 d-block"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/carousel3.png" class="w-100 d-block"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/carousel4.png" class="w-100 d-block"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/carousel5.png" class="w-100 d-block"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/carousel6.png" class="w-100 d-block"/>
-                </div>
+                <?php 
+                    $res = selectAll('carousel');
+
+                    while($row = mysqli_fetch_assoc($res))
+                    {
+                        $path = CAROUSEL_IMG_PATH;
+                        echo <<<data
+                        <div class="swiper-slide">
+                            <img src="$path$row[image]" class="w-100 d-block"/>
+                        </div>
+                        data;
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -391,33 +386,45 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
-                <iframe class="w-100 rounded" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15764.588644016287!2d125.58545805288166!3d8.958584557598106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301eac565a4abe5%3A0x87859279e2e3f66a!2sCaraga%20State%20University!5e0!3m2!1sen!2sph!4v1694926728189!5m2!1sen!2sph" loading="lazy"></iframe>
+                <iframe class="w-100 rounded" height="320px" src="<?php echo $contact_r['iframe'] ?>" loading="lazy"></iframe>
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="bg-white p-4 rounded mb-4">
                     <h5>Call Us</h5>
-                    <a href="tel: +639774071618" class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> +639774071618
+                    <a href="tel: +<?php echo $contact_r['pn1'] ?>" class="d-inline-block mb-2 text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i> +<?php echo $contact_r['pn1'] ?>
                     </a> <br>
-                    <a href="tel: +639774071618" class="d-inline-block text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> +639774071618
-                    </a>
+                    <?php 
+                        if($contact_r['pn2']!=''){
+                            echo<<<data
+                                <a href="tel: +$contact_r[pn2]" class="d-inline-block text-decoration-none text-dark">
+                                    <i class="bi bi-telephone-fill"></i> +$contact_r[pn2]
+                                </a>
+                            data;
+                        }
+                    ?>
                 </div>
                 <div class="bg-white p-4 rounded mb-4">
                     <h5>Follow Us</h5>
-                    <a href="#" class="d-inline-block mb-3">
-                        <span class="badge bg-light text-dark fs-6 p-2">
-                            <i class="bi bi-facebook me-1"></i> Facebook
-                        </span>
-                    </a>
+                    <?php 
+                        if($contact_r['fb']!=''){
+                            echo<<<data
+                                <a href="$contact_r[fb]" class="d-inline-block mb-3">
+                                    <span class="badge bg-light text-dark fs-6 p-2">
+                                        <i class="bi bi-facebook me-1"></i> Facebook
+                                    </span>
+                                </a>
+                            data;
+                        }
+                    ?>
                     <br>
-                    <a href="#" class="d-inline-block mb-3">
+                    <a href=<?php echo $contact_r['tw'] ?> class="d-inline-block mb-3">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-twitter me-1"></i> Twitter
                         </span>
                     </a>
                     <br>
-                    <a href="#" class="d-inline-block">
+                    <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-instagram me-1"></i> Instagram
                         </span>

@@ -73,39 +73,33 @@
     </div>
 
     <h3 class="my-5 fw-bold text-center">Management Team</h3>
+
+    <?php
+        $about_r = selectAll('team_details');
+        $path = ABOUT_IMG_PATH;
+
+        while($row = mysqli_fetch_assoc($about_r)){
+            echo<<<data
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6 col-md-5 mb-4 order-2">
+                        <h3 class="mb-3">$row[name]</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
+                    </p>
+                    </div>
+                    <div class="com-lg-5 col-md-5 mb-4 order-1">
+                        <img src="$path$row[picture]" class="w-75 rounded-circle border border-dark">
+                    </div>
+                </div>
+            </div>
+            data;
+        }
+    ?>
     
-    <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-lg-6 col-md-5 mb-4 order-2">
-                <h3 class="mb-3">Lorem ipsum dolor sit.</h3>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
-            </p>
-            </div>
-            <div class="com-lg-5 col-md-5 mb-4 order-1">
-                <img src="images/about/lelouch.jpg" class="w-100 rounded-circle border border-dark">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-                <h3 class="mb-3">Lorem ipsum dolor sit.</h3>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
-            </p>
-            </div>
-            <div class="com-lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-                <img src="images/about/lelouch.jpg" class="w-100 rounded-circle border border-dark">
-            </div>
-        </div>
-    </div>
 
     <?php require('inc/footer.php'); ?>
 
