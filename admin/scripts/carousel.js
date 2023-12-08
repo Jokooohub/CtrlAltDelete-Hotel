@@ -46,7 +46,7 @@ function get_carousel()
     let site_title = document.getElementById('site_title');
     let site_about = document.getElementById('site_about');
 
-    let shutdown_toggle =document.getElementById('shutdown_toggle');
+    // let shutdown_toggle =document.getElementById('shutdown_toggle');
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST","ajax/carousel_crud.php",true);

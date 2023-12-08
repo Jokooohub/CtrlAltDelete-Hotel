@@ -64,7 +64,7 @@
                     </div>
                 </div>
 
-                <!-- Shutdown section -->
+                <!-- Shutdown section
                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -79,7 +79,7 @@
                             No customers will be allowed to book hotel room when shutdown mode is turned on.
                         </p>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Contact Details Section -->
                 <div class="card border-0 shadow-sm mb-4">
@@ -244,7 +244,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label fw-bold">Pictures</label>
-                                        <input type="file" name="member_picture" id="member_picture_inp" accept="[.jpg, .png, .webp, .jpeg]" class="form-control shadow-none" required>
+                                        <input type="file" name="member_picture" id="member_picture_inp" accept=".jpg, .png, .webp, .jpeg" class="form-control shadow-none" required>
                                     </div>
                                 </div>
                                 <div class="modal-footer">

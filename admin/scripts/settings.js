@@ -16,7 +16,7 @@ function get_general()
     let site_title = document.getElementById('site_title');
     let site_about = document.getElementById('site_about');
 
-    let shutdown_toggle =document.getElementById('shutdown_toggle');
+    // let shutdown_toggle =document.getElementById('shutdown_toggle');
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST","ajax/settings_crud.php",true);
@@ -31,14 +31,14 @@ function get_general()
         site_title_inp.value = general_data.site_title;
         site_about_inp.value = general_data.site_about;
 
-        if(general_data.shutdown == 0){
-            shutdown_toggle.checked = false;
-            shutdown_toggle.value = 0;
-        }
-        else{
-            shutdown_toggle.checked = true;
-            shutdown_toggle.value = 1;
-        }
+        // if(general_data.shutdown == 0){
+        //     shutdown_toggle.checked = false;
+        //     shutdown_toggle.value = 0;
+        // }
+        // else{
+        //     shutdown_toggle.checked = true;
+        //     shutdown_toggle.value = 1;
+        // }
     }
 
 
@@ -77,26 +77,26 @@ function upd_general(site_title_val, site_about_val)
 }
 
 
-function upd_shutdown(val)
-{
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST","ajax/settings_crud.php",true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+// function upd_shutdown(val)
+// {
+//     let xhr = new XMLHttpRequest();
+//     xhr.open("POST","ajax/settings_crud.php",true);
+//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     
-    xhr.onload = function(){
-        if(this.responseText == 1 && general_data.shutdown == 0)
-        {
-            alert('success', 'Site has been shutdown!');
-        }
-        else
-        {
-            alert('success', 'Shutdown mode off!');
-        }
-        get_general();
-    }
+//     xhr.onload = function(){
+//         if(this.responseText == 1 && general_data.shutdown == 0)
+//         {
+//             alert('success', 'Site has been shutdown!');
+//         }
+//         else
+//         {
+//             alert('success', 'Shutdown mode off!');
+//         }
+//         get_general();
+//     }
     
-    xhr.send('upd_shutdown='+val);
-}
+//     xhr.send('upd_shutdown='+val);
+// }
 
 function get_contacts()
 {
@@ -216,7 +216,7 @@ function get_members()
     let site_title = document.getElementById('site_title');
     let site_about = document.getElementById('site_about');
 
-    let shutdown_toggle =document.getElementById('shutdown_toggle');
+    // let shutdown_toggle =document.getElementById('shutdown_toggle');
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST","ajax/settings_crud.php",true);
