@@ -88,7 +88,7 @@
             <div class="col-lg-5 col-md-12 px-4">
                 <div class="card mb-4 border-0 shadow rounded-3">
                     <div class="card-body">
-                        <form action="#pay_now.php" id="booking_form">
+                        <form action="pay_now.php" method="POST" id="booking_form">
                             <h6>Booking Details</h6>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -118,7 +118,7 @@
 
                                     <h6 class="mb-3 text-danger" id="pay_info">Provide Check-in and Check-out date!</h6>
                                     
-                                    <button name="pay_now" class="btn w-100 text-white custom-bg shadow-none mb-1" disabled>Pay Now</button>
+                                    <button name="pay_now" class="btn w-100 text-white custom-bg shadow-none mb-1" disabled>Book Now</button>
                                 </div>
                             </div>
                         </form>
@@ -140,7 +140,6 @@
         {
             let checkin_val =booking_form.elements['checkin'].value;
             let checkout_val =booking_form.elements['checkout'].value;
-
 
             booking_form.elements['pay_now'].setAttribute('disabled',true);
 
@@ -193,6 +192,7 @@
         }
 
     </script>
+
 
 </body>
 </html>

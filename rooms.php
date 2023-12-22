@@ -21,46 +21,12 @@
             <div class="col-lg-3 col-md-12 mb-lg-0 mb-4 ps-4">
             <nav class="navbar navbar-expand-lg navbar-light bg-white rounded shadow">
                     <div class="container-fluid flex-lg-column align-items-stretch">
-                        <h4 class="mt-2">Filters</h4>
+                        <h4 class="mt-2">Welcome!</h4>
                         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#filterDropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="filterDropdown">
-                            <div class="border bg-light p-3 round mb-3">
-                                <h5 class="mb-3" style="font-size:18px;">Check Availability</h5>
-                                <label class="form-label">Check-in</label>
-                                <input type="date" class="form-control shadow-none mb-3">
-                                <label class="form-label">Check-out</label>
-                                <input type="date" class="form-control shadow-none">
-                            </div>
-                            <div class="border bg-light p-3 round mb-3">
-                                <h5 class="mb-3" style="font-size:18px;">Facilities</h5>
-                                <div class="mb-2">
-                                    <input type="checkbox" id="f1" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f1">Facility One</label>
-                                </div>
-                                <div class="mb-2">
-                                    <input type="checkbox" id="f2" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f2">Facility Two</label>
-                                </div>
-                                <div class="mb-2">
-                                    <input type="checkbox" id="f3" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f3">Facility Three</label>
-                                </div>
-                            </div>
-                            <div class="border bg-light p-3 round mb-3">
-                                <h5 class="mb-3" style="font-size:18px;">Guests</h5>
-                                <div class="d-flex">
-                                    <div class="me-3">
-                                    <label class="form-label">Adults</label>
-                                    <input type="number" class="form-control shadow-none">
-                                    </div>
-                                    <div>
-                                    <label class="form-label">Children</label>
-                                    <input type="number" class="form-control shadow-none">
-                                    </div>
-                                </div>
-                            </div>
+                            <p>Welcome to CtrlAltDelete Hotel! We're thrilled to have you with us. Whether you're here for business or leisure, our team is dedicated to making your stay exceptional. If there's anything you need assistance with, feel free to ask. Enjoy your time with us! <br><br>These are the rooms available in our hotel!</p>
                         </div>
                     </div>
                 </nav>
@@ -160,8 +126,6 @@
 
                 }
             ?>
-
-            </div>
 
         </div>
     </div>

@@ -14,9 +14,7 @@
         <h2 class="fw-bold text-center">Contact Us</h2>
         <div class="h-line bg-dark"></div>
         <p class="text-center mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Vitae obcaecati at voluptatibus<br>ratione impedit quidem sapiente, 
-            quis minima hic natus.
+        Have a question, suggestion, or just want to get in touch? Feel free to reach out to us using the form below. We value your feedback and are committed to providing you with the best possible experience. Please fill in the required fields, and provide as much detail as possible so that we can assist you more effectively. Our team is here to help and will get back to you as soon as possible. Thank you for choosing to connect with us. We appreciate your interest and look forward to hearing from you!
         </p>
     </div>
 

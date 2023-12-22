@@ -29,12 +29,9 @@
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 col-md-5 mb-4 order-2">
-                <h3 class="mb-3">Lorem ipsum dolor sit.</h3>
+                <h3 class="mb-3">Hello!</h3>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Porro eligendi exercitationem eius magnam dolorem aperiam inventore!
+            Welcome to Hotel Booking System! We're on a mission to make your bookings fast and easy. Thanks for joining us on this journey.
             </p>
             </div>
             <div class="com-lg-5 col-md-5 mb-4 order-1">

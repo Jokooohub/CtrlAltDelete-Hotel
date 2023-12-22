@@ -2,7 +2,6 @@
 
     require('../admin/inc/db_config.php');
     require('../admin/inc/essentials.php');
-    require("../inc/sendgrid/sendgrid-php.php");
 
     date_default_timezone_set("Asia/Manila");
 
@@ -38,9 +37,26 @@
         }
         else{
             session_start();
-            $_SESSION['room'];
+            // $_SESSION['room'];
 
             // run query to check if room is available or not
+           
+           $tb_query = "SELECT COUNT(*) AS `total_bookings` FROM `booking_order`
+                WHERE room_id=? AND check_out > ? AND check_in < ?";
+
+            $values = [$_SESSION['room']['id'],$frm_data['check_in'],$frm_data['check_out']];
+
+            $tb_fetch = mysqli_fetch_assoc(select($tb_query,$values,'iss'));
+
+            $rq_result = select("SELECT `quantity` FROM `rooms` WHERE `id`=?",[$_SESSION['room']['id']],'i');
+            $rq_fetch = mysqli_fetch_assoc($rq_result);
+
+            if(($rq_fetch['quantity']-$tb_fetch['total_bookings'])<=0){
+                $status = 'unavailable';
+                $result = json_encode(['status'=>$status]);
+                echo $result;
+                exit;
+            }
 
             $count_days = date_diff($checkin_date,$checkout_date)->days;
             $payment = $_SESSION['room']['price'] * $count_days;
@@ -52,8 +68,6 @@
             echo $result;
 
         }
-
-
     }
 
 ?>

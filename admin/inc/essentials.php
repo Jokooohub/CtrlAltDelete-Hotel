@@ -21,9 +21,9 @@
 
     // sendgrid api key
 
-    define('SENDGRID_API_KEY',"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");
-    define('SENDGRID_EMAIL',"joko.saco@carsu.edu.ph");
-    define('SENDGRID_NAME',"CtrlAltDelete");
+    define('SENDGRID_API_KEY',"your_api_key_here");
+    define('SENDGRID_EMAIL',"the email used");
+    define('SENDGRID_NAME',"CtrlAltDelete Hotel");
 
 
     function adminLogin()
